@@ -19,3 +19,12 @@ class BinaryTree: # vai servir para guardar a raiz e vai ser o ponto de partida 
         print(node, end=' ')
         if node.right:
             self.inorder_traversal(node.right)
+
+    def postorder_traversal(self, node=None): # self - própria arvore, node é o nó 
+        if node is None:
+            node = self.root 
+        if node.left: # se existe a esquerda
+            self.postorder_traversal(node.left)
+        if node.right:
+            self.postorder_traversal(node.right)
+        print(node, end=' ')
