@@ -3,6 +3,7 @@ from Node import Node
 
 ROOT = 'root'
 
+
 class BinarySearchTree(BinaryTree):
     def insert(self, value):
         parent = None
